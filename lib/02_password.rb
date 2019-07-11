@@ -1,35 +1,45 @@
 def signup
-	puts " Bonjour définissez un mot de passe:"
-	password = gets.chomp
-	return password
-end
-
-def verif 
-	puts " Confirmez votre mot de passe"
-    confirmed = gets.chomp
-    return confirmed
-
+    puts " Bonjour définissez un mot de passe:"
+    password = gets.chomp
+    return password
 end
 
 
-def login
-    password = signup
-    confirmed = verif 
+def login(password)
 
-    while password != confirmed 
-    puts " Votre mot de passe est erroné, veuillez recommencer"	
-    #i == confirmed
-    verif
-    end
+   puts "Veuillez confirmer votre mot de passe s'il vous plait"
+   confirmed = gets.chomp
+   while password != confirmed
+   puts " Votre mot de passe est erroné, veuillez recommencer"    
+    
+   confirmed = gets.chomp
 
-    puts "Bienvenue sur la home page"
-
+    
+   end
 	
+puts "Bienvenue sur la home page"
+    
 end
-login
-
-
 
 def welcome_screen
+
+    puts "Bienvenue cher utilisateur au sein de votre espace secret"
+
+    puts "le contenu – supposé – des textos et messages WhatsApp du téléphone 
+    d'un membre de ton groupe est le suivant"
+
+    #faudra voir comment introduire une liste de nom de membre et 
+    #permettre au programme d'afficher le contenu d'un membre particulier
+
+end
+
+def perform
+
+	password = signup
+	login(password)
+	welcome_screen
+
+
 	
 end
+perform
