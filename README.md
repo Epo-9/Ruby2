@@ -1,4 +1,5 @@
 Eponine PAILLET /slack : Eponine Paillet
+Nathalie GREGO /slack : Nathalie GREGO
 
 2.1. Programme 0 : hello
 2.1.1 Dis Bonjour:
