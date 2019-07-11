@@ -46,3 +46,30 @@ end
 
 end
 
+def pyramid
+
+    puts "bienvenue dans ma pyramide ! Combien d'étages veux-tu ?"
+    print "> "
+    input = gets.chomp.to_i
+    
+    hashtag = "#"
+    espace = " "
+    i = 1
+    n = input
+
+    puts "Voici la pyramide :"    
+
+    while i <= (input/2 +1) do 
+      puts "#{espace * n} #{hashtag * i}"
+      i = i+2
+      n = n-1
+    end
+    while i >= (input%2)
+      puts "#{espace * n} #{hashtag * i}"
+      i = i-2
+      n = n+1
+    end
+end
+
+pyramid
+
